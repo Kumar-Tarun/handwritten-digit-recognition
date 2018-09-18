@@ -64,7 +64,7 @@ model_checkpoint = ModelCheckpoint(filepath = 'weights.hdf5', verbose = 1, save_
 optimizer = Adam(lr=0.0003)
 
 model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics =['accuracy'])
-history = model.fit(train_X, train_Y, epochs = 1, batch_size = 32, callbacks = [reduce_lr, model_checkpoint], verbose=2, validation_data = (val_x, val_y))
+history = model.fit(train_X, train_Y, epochs = 30, batch_size = 32, callbacks = [reduce_lr, model_checkpoint], verbose=2, validation_data = (val_x, val_y))
 
 # Predictions
 predictions = model.predict(test_x)
