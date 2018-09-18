@@ -90,6 +90,7 @@ plt.xlabel('epoch')
 plt.legend(['train', 'test'], loc='upper left')
 plt.show()
 
+# Prepare the submission file
 indices = np.arange(test_x.shape[0]) + 1
 data = {'ImageId': indices, 'Label': predictions}
 df = pd.DataFrame(data)
